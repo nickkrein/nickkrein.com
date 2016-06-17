@@ -198,20 +198,28 @@ header {
   width: 50%;
   z-index: 11;
   top: 35%;
-  right: -15px;
+  right: -80px;
   text-align: center;
+  color: #DDD;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'courier', courier;
+  line-height: 1.5em;
+  opacity: 0;
 }
 
 #image-text .dev {
   position: relative;
-  color: #DDD;
   font-size: 18px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-family: 'courier', courier;
   font-weight: 400;
   letter-spacing: 2px;
-  line-height: 25px;
-  opacity: 0;
+}
+
+.dev-info {
+  display: none;
+  position: relative;
+  display: hidden;
+  text-align: right;
+  font-size: 16px;
 }
 
 .greeting {

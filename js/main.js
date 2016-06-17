@@ -13,7 +13,7 @@
 
     $(window).on('load', function() {
       $('#me').animate({opacity: 1}, 400, function() {
-        $('.dev').animate({opacity: 1, right: 15}, 250, 'easeOutQuad');
+        $('#image-text').animate({opacity: 1, right: 0}, 250, 'easeOutQuad');
           $('.greeting').animate({opacity: .5, top: 0}, {duration: 250, easing: 'easeOutQuad', queue: false, complete: function () {
 
             $(".typed").typed({
