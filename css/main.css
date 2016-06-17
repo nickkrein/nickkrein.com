@@ -152,6 +152,7 @@ header {
 
 #header-nav {
   background: #222;
+  opacity: .9;
   position: absolute;
   top: 2.37em;
   text-align: center;
@@ -218,8 +219,9 @@ header {
   display: none;
   position: relative;
   display: hidden;
-  text-align: right;
-  font-size: 16px;
+  background: rgba(255,255,255,.1);
+  margin-top: .5em;
+  font-size: 14px;
 }
 
 .greeting {
@@ -408,8 +410,17 @@ footer {
  Modify as content requires.
  ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 500px) {
   /* Style adjustments for viewports that meet the condition */
+  .dev-info {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .dev br {
+    display: none;
+  }
 }
 
 @media print,
