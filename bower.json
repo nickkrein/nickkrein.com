@@ -1,7 +1,7 @@
 {
   "name": "nick-website",
   "description": "",
-  "main": "typed.js",
+  "main": "main.js",
   "authors": [
     "Nick Krein <nkreinmusic@gmail.com>"
   ],
