@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/nkreinmusic/nickkrein.com/issues"
   },
-  "homepage": "https://github.com/nkreinmusic/nickkrein.com#readme",
-  "devDependencies": {
-    "webpack": "^1.13.1"
-  }
+  "homepage": "https://github.com/nkreinmusic/nickkrein.com#readme"
 }
