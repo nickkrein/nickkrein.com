@@ -1,0 +1,21 @@
+{
+  "name": "nick-website",
+  "description": "",
+  "main": "typed.js",
+  "authors": [
+    "Nick Krein <nkreinmusic@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nkreinmusic/nickkrein.com",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "typed.js": "^1.1.4"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "nick-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkreinmusic/nickkrein.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkreinmusic/nickkrein.com/issues"
+  },
+  "homepage": "https://github.com/nkreinmusic/nickkrein.com#readme",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
