@@ -118,7 +118,7 @@ header {
   opacity: 0;
   top: 0px;
   left: 0px;
-  background: url("../assets/wall.jpg") no-repeat;
+  background: url("../../assets/wall.jpg") no-repeat;
   background-size: cover;
   z-index: -1; }
 
@@ -188,7 +188,7 @@ footer {
   left: 0px; }
 
 .arrow {
-  background-image: url("../assets/arrow_up.png");
+  background-image: url("../../assets/arrow_up.png");
   background-position: 0px -10px;
   background-size: 100px 80px;
   background-color: #222;
@@ -201,5 +201,82 @@ footer {
   margin-left: -45px;
   width: 100px;
   height: 60px; }
+
+/*=====================================
+=            Media Queries            =
+=====================================*/
+@media only screen and (min-width: 500px) {
+  /* Style adjustments for viewports that meet the condition */
+  .dev-info {
+    display: block; } }
+@media only screen and (min-width: 600px) {
+  .dev br {
+    display: none; } }
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+ Print styles.
+ Inlined to avoid the additional HTTP request:
+ http://www.phpied.com/delay-loading-your-print-css/
+ ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
 
 /*# sourceMappingURL=sass.css.map */
