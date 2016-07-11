@@ -31,3 +31,37 @@
     box-shadow: $top $left $blur $color;
   }
 }
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+
+@mixin flex-direction($direction) {
+  @if $direction == column {
+    -webkit-flex-direction:vertical;
+    -moz-flex-direction:vertical;
+    -ms-flex-direction:column;
+    -webkit-flex-direction:column;
+    flex-direction:column;
+  } @else {
+    -webkit-flex-direction:horizontal;
+    -moz-flex-direction:horizontal;
+    -ms-flex-direction:row;
+    -webkit-flex-direction:row;
+    flex-direction:row;
+  }
+}
