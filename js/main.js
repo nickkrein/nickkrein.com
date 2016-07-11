@@ -12,18 +12,19 @@
     // The DOM is ready!
 
     $(window).on('load', function() {
-      $('#me').animate({opacity: 1}, 400, function() {
-        $('#image-text').animate({opacity: 1, right: 0}, 250, 'easeOutQuad');
-          $('.greeting').animate({opacity: .5, top: 0}, {duration: 250, easing: 'easeOutQuad', queue: false, complete: function () {
-
-            $(".typed").typed({
-              strings: ["Hello, World!^600\nMy name is Nick.^400\nLet's make something."],
-              typeSpeed: 15,
-              contentType: 'text'
-            });
-          }});
-          $('.gradient-filter').animate({opacity: 1}, 400);
-          $('footer').animate({opacity: 1, top: 0}, {duration: 250, easing: 'easeOutQuad', queue: false});
+      $('header').animate({opacity: 1, top: 0}, 250, 'easeOutQuad', function(){
+        $('#me').animate({opacity: 1}, 400, function() {
+          $('#image-text').animate({opacity: 1, right: 0}, 250, 'easeOutQuad');
+            $('.greeting').animate({opacity: .5, top: 0}, {duration: 250, easing: 'easeOutQuad', queue: false, complete: function () {
+              $(".typed").typed({
+                strings: ["Hello, World!^600\nMy name is Nick.^400\nLet's make something."],
+                typeSpeed: 15,
+                contentType: 'text'
+              });
+            }});
+            $('.gradient-filter').animate({opacity: 1}, 400);
+            $('footer').animate({opacity: 1, top: 0}, {duration: 250, easing: 'easeOutQuad', queue: false});
+        })
       })
     })
     
