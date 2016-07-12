@@ -14,8 +14,8 @@
 
     $(window).on('load', function() {
       $('header').animate({opacity: 1, top: 0}, 250, 'easeOutQuad', function(){
-        $('#me').animate({opacity: 1}, 400, function() {
-          $('#image-text').animate({opacity: 1, right: 0}, 250, 'easeOutQuad');
+        $('.me').animate({opacity: 1}, 400, function() {
+          $('.image-text').animate({opacity: 1, right: 0}, 250, 'easeOutQuad');
             $('.greeting').animate({opacity: .5, top: 0}, {duration: 250, easing: 'easeOutQuad', queue: false, complete: function () {
               $(".typed").typed({
                 strings: ["^500Hello, World!^600\nMy name is Nick.^400\nLet's make something."],
@@ -47,10 +47,10 @@
     
 
     $('.icon-nav').click(function() {
-      $('#header-nav').slideToggle(400, 'easeOutQuad');
+      $('.header-nav').slideToggle(400, 'easeOutQuad');
     });
     
-    $('#header-nav li a').hover(function() {
+    $('.header-nav li a').hover(function() {
       $(this).animate({
         color: '#868a92'
       }, 200)
