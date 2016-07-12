@@ -102,9 +102,10 @@ header {
   font-family: 'courier', courier;
   line-height: 1.5em;
   opacity: 0;
+  overflow: hidden;
 }
 
-#image-text .dev {
+#image-text .dev, .dev-switch {
   position: relative;
   font-size: 18px;
   font-weight: 400;
@@ -118,6 +119,11 @@ header {
   background: rgba(255,255,255,.1);
   margin-top: .5em;
   font-size: 14px;
+  @media only screen and (min-width: 500px) {
+    .dev-info {
+        display: block;
+    }
+  }
 }
 
 .greeting {
@@ -232,12 +238,6 @@ footer {
   /* Style adjustments for viewports that meet the condition */
   .dev-info {
     display: block;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .dev br {
-    display: none;
   }
 }
 
