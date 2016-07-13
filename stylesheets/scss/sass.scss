@@ -1,14 +1,14 @@
 @import 'mixins';
 
 header {
-  @include opacity(0);
-  @include box-shadow(0px, 1px, 3px, rgba(0,0,0,0.2));
-  background-color: #111;
-  height: 4em;
   width: 90%;
-  padding: 0 5%;
+  height: 4em;
   position: absolute;
   top: -80px;
+  padding: 0 5%;
+  background-color: #111;
+  opacity: 0;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
   z-index: 100;
   
     .logo {
@@ -28,38 +28,38 @@ header {
     }
   
   .icon-nav {
+    display: block;
     height: 4em;
     width: 2em;
     float: right;
-    display: block;
     cursor: pointer;
   
     div {
       width: 2em;
       height: .25em;
-      background-color: #FFF;
-      margin: 6px 0;
       position: relative;
       top: 13px;
+      background-color: #FFF;
+      margin: 6px 0;
     }
   
   }
   
   .header-nav {
     @include font-size(26px);
-    @include opacity(.9);
-    background: #222;
+    width: 100%;
     position: absolute;
     top: 2.37em;
-    text-align: center;
-    width: 100%;
     right: 0px;
+    background: #222;
+    opacity: .9;
+    text-align: center;
     
     li {
-      list-style: none;
       display: block;
-      border-bottom: #363636 solid 1px;
       height: 3em;
+      list-style: none;
+      border-bottom: #363636 solid 1px;
       padding: 0;
     
       a {
@@ -73,24 +73,21 @@ header {
   }
 }
 
-
-
-
 .content {
   width: 100%;
   position: relative;
   
   .image-text {
-    @include opacity(0);
-    position: absolute;
     width: 50%;
-    z-index: 11;
+    position: absolute;
     top: 35%;
     right: -80px;
+    z-index: 11;
     text-align: center;
     color: #DDD;
+    opacity: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-family: 'courier', courier;
+    font-family: 'Courier', monospace;
     line-height: 1.5em;
     overflow: hidden;
     
@@ -102,8 +99,8 @@ header {
     }
     
     .dev-info {
-      position: relative;
       display: none;
+      position: relative;
       background: rgba(255,255,255,.1);
       margin-top: .5em;
       font-size: 14px;
@@ -116,24 +113,23 @@ header {
   }
 
   .me {
-    @include box-shadow(0px, 4px, 3px, rgba(0,0,0,0.2));
-    @include opacity(0);
     max-width: 100%;
     position: relative;
     margin-top: 4em;
     z-index: 10;
+    opacity: 0;
+    box-shadow: 0px 4px 3px rgba(0,0,0,0.2);
   }
   
   .greeting {
-    @include opacity(0);
     position: relative;
     height: 200px;
     background: #FAFAFA;
     padding: 2em 10%;
     top: 80px;
+    opacity: 0;
   
     .gradient-filter {
-      @include opacity(0);
       max-width: 100%;
       width: 100%;
       height: 100%;
@@ -141,6 +137,7 @@ header {
       left: 0px;
       background: url('../../assets/wall.jpg') no-repeat;
       background-size: cover;
+      opacity: 0;
       z-index: -1;
     }
   
@@ -158,47 +155,45 @@ header {
       }
   
       .typed-cursor {
-        @include opacity(1);
+        opacity: 1;
         font-size: 24px;
         line-height: 25px;
-        -webkit-animation: blink 0.9s infinite;
-        -moz-animation: blink 0.9s infinite;
         animation: blink 0.9s step-end infinite;
       }
   
       @keyframes blink{
-        0% { @include opacity(1); }
-        50% { @include opacity(0); }
-        100% { @include opacity(1); }
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
       }
       @-webkit-keyframes blink{
-        0% { @include opacity(1); }
-        50% { @include opacity(0); }
-        100% { @include opacity(1); }
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
       }
       @-moz-keyframes blink{
-        0% { @include opacity(1); }
-        50% { @include opacity(0); }
-        100% { @include opacity(1); }
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
       }
     }
   }
 }
 
 footer {
-  @include box-shadow(0px, -1px, 3px, rgba(0,0,0,0.4));
-  @include opacity(0);
-  background: #222;
   height: 50px;
+  position: relative;
+  background: #222;
+  top: 80px;
   padding: 40px 5% 0 5%;
   font-family: sans-serif;
-  color: #F5F5F5;
   font-size: 16px;
   font-size: 1rem;
   text-align: center;
-  position: relative;
   line-height: 14px;
-  top: 80px;
+  color: #F5F5F5;
+  box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
+  opacity: 0;
   
   .to-top {
     width: 100%;
@@ -208,24 +203,20 @@ footer {
     left: 0px;
   
     .arrow {
-      background-image: url("../../assets/arrow_up.png");
-      background-position: 0px -10px;
-      background-size: 100px 80px;
-      background-color: #222;
-      -moz-border-radius: 0px;
-      -webkit-border-radius: 5px 5px 0px 0px;
-      border-radius: 5px 5px 0px 0px; 
+      width: 100px;
+      height: 60px;
       position: absolute;
       left: 50%;
       bottom: 0px;
       margin-left: -45px;
-      width: 100px;
-      height: 60px;
+      background-image: url("../../assets/arrow_up.png");
+      background-position: 0px -10px;
+      background-size: 100px 80px;
+      background-color: #222;
+      border-radius: 5px 5px 0px 0px; 
     }
   }
 }
-
-
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
