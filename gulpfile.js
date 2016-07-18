@@ -6,6 +6,7 @@ var minifyHtml= require('gulp-minify-html');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imageMin= require('gulp-imagemin');
+var nodemon = require('gulp-nodemon');
 var browserSync = require('browser-sync');
 
 // todo: create paths object
@@ -57,11 +58,25 @@ gulp.task('images', function() {
 		.pipe(gulp.dest('dist/assets'))
 });
 
-gulp.task('serve', function() {
+gulp.task('nodemon', function() {
+  var started= false;
+
+  return nodemon({
+    script: 'server.js'
+  }).on('start', function() {
+    if (!started) {
+      cb();
+      started = true;
+    }
+  });
+});
+
+gulp.task('serve', ['nodemon'], function() {
   browserSync({
-    server: {
-      baseDir: './dist'
-    },
+    // server: {
+    //   baseDir: './dist'
+    // },
+    proxy: 'http://localhost:8000',
     // Remove "Connected to BrowserSync" notifications
     notify: false
   });
