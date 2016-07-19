@@ -25,6 +25,9 @@ html {
   font-size: 1em;
   line-height: 1.4;
   background: #FAFAFA;
+  @media only screen and (min-width: 1280px) {
+    background: url('../assets/img-noise-500x500.png');
+  }
 }
 
 /*
