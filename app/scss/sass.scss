@@ -4,7 +4,7 @@
 
 header {
   width: 100%;
-  height: 4em;
+  height: 64px;
   position: absolute;
   top: -80px;
   padding: 0;
@@ -34,18 +34,29 @@ header {
   
     .social {
       display: none;
+      // @media only screen and (min-width: 1020px) {
+      //   display: block;
+      //   width: 100px;
+      //   height: 64px;
+      //   float: right;
+      // }
+      // li {
+      //   display: inline-block;
+      // }
     }
   
   .icon-nav {
     display: block;
-    height: 4em;
-    width: 2em;
+    height: 64px;
+    width: 32px;
     float: right;
     cursor: pointer;
-  
+    @media only screen and (min-width: 660px) {
+      display: none;
+    }
     div {
-      width: 2em;
-      height: .25em;
+      width: 32px;
+      height: 4px;
       position: relative;
       top: 13px;
       background-color: #FFF;
@@ -65,12 +76,29 @@ header {
     text-align: center;
     display: none;
 
+    @media only screen and (min-width: 660px) {
+      width: auto;
+      height: 64px;
+      display: block;
+      top: 0px;
+      background-color: transparent;
+      position: static;
+      float: right;
+    }
+
     li {
       display: block;
       height: 3em;
       list-style: none;
       border-bottom: #363636 solid 1px;
       padding: 0;
+
+      @media only screen and (min-width: 660px) {
+        display: inline-block;
+        border: none;
+        height: 64px;
+        margin: 0 15px;
+      }
   
       a {
         display: block;
@@ -78,11 +106,15 @@ header {
         font-family: sans-serif;
         text-decoration: none;
         line-height: 3em;
+        @media only screen and (min-width: 660px) {
+          @include font-size(20px);
+          display: inline-block;
+          line-height: 64px;
+        }
       }
     }
   }
 }
-
 .content {
   position: relative;
   max-width: 1280px;
